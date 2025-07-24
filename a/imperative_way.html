@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count UI</title>
+</head>
+
+<body>
+    <div class="root"></div>
+
+    <script>
+        let count = 1;
+        const root = document.querySelector('.root');
+
+        // Create a span for displaying count
+        const countText = document.createElement('span');
+        countText.innerText = `Likes: ${count}`;
+        root.appendChild(countText);
+
+        // Create a button
+        const button = document.createElement('button');
+        button.innerText = 'Count +';
+        button.addEventListener('click', function () {
+            count++;
+            countText.innerText = `Likes: ${count}`; // ✅ Only update the text
+        });
+
+        root.appendChild(button); // Append button separately
+    </script>
+</body>
+
+</html>

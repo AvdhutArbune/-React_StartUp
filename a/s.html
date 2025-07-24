@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+</head>
+
+<body>
+    <div class="root"></div>
+</body>
+
+</html>
+<script>
+    let Root = document.querySelector('.root')
+    let List = document.createElement('ul')
+    let Movies = ['Spidermen', "Batman", 'Avengers']
+    Movies.forEach((ele) => {
+        let li = document.createElement('li')
+        li.innerHTML = ele
+        List.append(li)
+    })
+    Root.append(List)
+
+</script>

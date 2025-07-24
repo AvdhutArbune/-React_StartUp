@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let box1={
+        send:function(content){
+            console.log(content);    
+        }
+    }
+    box1.send('Hello world')
+
+
+let box2={
+    send:function(content,cb){
+        cb(content)
+    }
+}
+box2.send('Hello world',function(item){
+    console.log(item);
+    
+})
+</script>
